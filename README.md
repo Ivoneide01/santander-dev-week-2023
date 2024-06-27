@@ -20,7 +20,7 @@ classDiagram
   class Cliente {
     -String nome
     -Endereco endereco
-    -Pedido[] pedidos
+    -Pedido pedidos
   }
 
   class Endereco {
@@ -33,7 +33,7 @@ classDiagram
   class Pedido {
     -String numero
     -Date data
-    -Produto[] produtos
+    -Produto produtos
   }
 
   class Produto {
