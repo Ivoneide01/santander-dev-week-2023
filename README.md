@@ -38,7 +38,7 @@ classDiagram
 
   class Produto {
     -String nome
-    -Number preco
+    -Double preco
     -Categoria categoria
   }
 
@@ -51,7 +51,6 @@ classDiagram
   Cliente "1" *-- "N" Pedido
   Pedido "1" *-- "N" Produto
   Produto "1" *-- "1" Categoria
-
 
 ## IMPORTANTE
 
