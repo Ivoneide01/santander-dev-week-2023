@@ -15,43 +15,42 @@ O Figma foi utilizado para a abstração do domínio desta API, sendo útil na a
 
 ## Diagrama de Classes (Domínio da API)
 
-```mermaid
 classDiagram
-  class User {
-    -String name
-    -Account account
-    -Feature[] features
-    -Card card
-    -News[] news
+  class Cliente {
+    -String nome
+    -Endereco endereco
+    -Pedido[] pedidos
   }
 
-  class Account {
-    -String number
-    -String agency
-    -Number balance
-    -Number limit
+  class Endereco {
+    -String rua
+    -String cidade
+    -String estado
+    -String cep
   }
 
-  class Feature {
-    -String icon
-    -String description
+  class Pedido {
+    -String numero
+    -Date data
+    -Produto[] produtos
   }
 
-  class Card {
-    -String number
-    -Number limit
+  class Produto {
+    -String nome
+    -Number preco
+    -Categoria categoria
   }
 
-  class News {
-    -String icon
-    -String description
+  class Categoria {
+    -String nome
+    -String descricao
   }
 
-  User "1" *-- "1" Account
-  User "1" *-- "N" Feature
-  User "1" *-- "1" Card
-  User "1" *-- "N" News
-```
+  Cliente "1" *-- "1" Endereco
+  Cliente "1" *-- "N" Pedido
+  Pedido "1" *-- "N" Produto
+  Produto "1" *-- "1" Categoria
+
 
 ## IMPORTANTE
 

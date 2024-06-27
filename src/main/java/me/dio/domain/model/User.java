@@ -16,10 +16,10 @@ public class User {
     @OneToOne(cascade = CascadeType.ALL)
     private Account account;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.ALL) // um pára um onetoone
     private Card card;
 
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER) // onetomany - um para muitos
     private List<Feature> features;
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
